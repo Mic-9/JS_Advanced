@@ -4,11 +4,17 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(8, 28, 21);
-  color: rgb(216, 243, 220);
+  background-color: rgb(67, 7, 154);
+  color: rgb(122, 255, 121);
 }
+h1 {
+  text-align: center;
+  margin-top: 6%;
+}
+
 footer {
   background-color: rgb(30, 30, 30);
+  color: rgb(216, 243, 220);
   position: fixed;
   left: 0px;
   right: 0px;
