@@ -7,7 +7,7 @@ function NewsFrame(classe, div_a) {
 
   const titolo = document.createElement("h3");
   frm.appendChild(titolo);
-  const testo = document.createTextNode("prova prova sa sa");
+  const testo = document.createTextNode("TITOLO NEWS");
   titolo.appendChild(testo);
 
   const link = document.createElement("div");
@@ -22,7 +22,7 @@ function NewsFrame(classe, div_a) {
 
   const data = document.createElement("p");
   frm.appendChild(data);
-  const text_d = document.createTextNode("data data data");
+  const text_d = document.createTextNode("gg/mm/aaaa");
   data.appendChild(text_d);
 
   const corpo = document.getElementById("corpo");
@@ -41,5 +41,3 @@ let button = document.getElementById("btn");
 button.addEventListener("click", function TenMore() {
   TenNews();
 });
-
-//io voglio ottenere che cliccando sul pulsante gli elementi passino dai 10 iniziali a 20 ma con il codice che ti ho dato passano da 10 a 30 e non capisco perchè
