@@ -5,10 +5,14 @@ function NewsFrame(classe, div_a) {
   const frm = document.createElement("div");
   frm.className = classe;
 
+  //titolo
+
   const titolo = document.createElement("h3");
   frm.appendChild(titolo);
   const testo = document.createTextNode("TITOLO NEWS");
   titolo.appendChild(testo);
+
+  //link
 
   const link = document.createElement("div");
   link.className = div_a;
@@ -19,6 +23,8 @@ function NewsFrame(classe, div_a) {
   link.appendChild(a);
   const text_a = document.createTextNode("cliccami");
   a.appendChild(text_a);
+
+  //data
 
   const data = document.createElement("p");
   frm.appendChild(data);
@@ -41,3 +47,14 @@ let button = document.getElementById("btn");
 button.addEventListener("click", function TenMore() {
   TenNews();
 });
+
+fetch("https://hacker-news.firebaseio.com/v0/maxitem.json")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((e) => {
+    console.error("sorry:", e);
+  });
