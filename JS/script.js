@@ -1,3 +1,26 @@
+fetch("https://hacker-news.firebaseio.com/v0/newstories.json")
+  .then((response) => response.json())
+  .then((id) => {
+    const ten = [];
+    for (let i = 0; i < 10; i++) {
+      ten.push(id[i]);
+    }
+    ten.forEach((tenId) => {
+      const singleUrl = `https://hacker-news.firebaseio.com/v0/item/${tenId}.json`;
+      fetch(singleUrl)
+        .then((response2) => response2.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((e) => {
+          console.error("Errore singolo id:", e);
+        });
+    });
+  })
+  .catch((e) => {
+    console.error("Errore array id:", e);
+  });
+
 let corpo = document.querySelector("main");
 corpo.setAttribute("id", "corpo");
 
@@ -44,17 +67,4 @@ TenNews();
 
 let button = document.getElementById("btn");
 
-button.addEventListener("click", function TenMore() {
-  TenNews();
-});
-
-fetch("https://hacker-news.firebaseio.com/v0/maxitem.json")
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((e) => {
-    console.error("sorry:", e);
-  });
+button.addEventListener("click", TenNews);
