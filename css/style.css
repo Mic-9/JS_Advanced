@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(67, 7, 154);
-  color: rgb(122, 255, 121);
+  background-color: rgb(34, 39, 40);
+  color: rgb(4, 206, 125);
 }
 
 /* Scrollbar */
@@ -23,7 +23,7 @@ html::-webkit-scrollbar-thumb {
 
 h1 {
   text-align: center;
-  margin-top: 6%;
+  margin: 3%;
 }
 
 main {
@@ -35,36 +35,43 @@ main {
   justify-content: space-around;
 }
 .classe {
-  background-color: rgb(151, 151, 151);
+  background-color: rgb(1, 56, 34);
   width: 320px;
   height: 180px;
   padding: 5px 5px 5px 10px;
-  border: none;
+  border: 1px solid rgb(66, 86, 79);
   border-radius: 15px;
   margin: 6px 3px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
+  text-align: center;
   font-weight: bold;
+}
+h3 {
+  padding: 15px;
+}
+a {
+  margin: 10px 5px;
+  padding: 8px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: rgb(216, 243, 220);
+  background-color: rgb(30, 30, 30);
+}
+p {
+  padding: 15px;
 }
 button {
-  margin-bottom: 50px;
-}
-
-.frame {
-  background-color: gray;
-  width: 320px;
-  height: 180px;
-  padding: 5px 5px 5px 10px;
-  border: none;
+  background-color: rgb(34, 39, 40);
+  color: rgb(4, 206, 125);
+  padding: 8px;
+  border: solid 3px rgb(66, 86, 79);
   border-radius: 15px;
-  margin: 6px 3px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+  display: block;
+  margin: 30px auto 60px auto;
+  font-size: 25px;
 }
 
 footer {
