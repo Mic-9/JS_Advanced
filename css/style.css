@@ -34,6 +34,20 @@ main {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.classe {
+  background-color: rgb(151, 151, 151);
+  width: 320px;
+  height: 180px;
+  padding: 5px 5px 5px 10px;
+  border: none;
+  border-radius: 15px;
+  margin: 6px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
 button {
   margin-bottom: 50px;
 }

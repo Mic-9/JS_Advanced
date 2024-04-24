@@ -11,7 +11,9 @@ fetch("https://hacker-news.firebaseio.com/v0/newstories.json")
         .then((response2) => response2.json())
         .then((data) => {
           console.log(data);
+          NewsFrame("classe", "div_a", data);
         })
+
         .catch((e) => {
           console.error("Errore singolo id:", e);
         });
@@ -24,7 +26,7 @@ fetch("https://hacker-news.firebaseio.com/v0/newstories.json")
 let corpo = document.querySelector("main");
 corpo.setAttribute("id", "corpo");
 
-function NewsFrame(classe, div_a) {
+function NewsFrame(classe, div_a, data) {
   const frm = document.createElement("div");
   frm.className = classe;
 
@@ -32,7 +34,7 @@ function NewsFrame(classe, div_a) {
 
   const titolo = document.createElement("h3");
   frm.appendChild(titolo);
-  const testo = document.createTextNode("TITOLO NEWS");
+  const testo = document.createTextNode(data.title);
   titolo.appendChild(testo);
 
   //link
@@ -49,22 +51,23 @@ function NewsFrame(classe, div_a) {
 
   //data
 
-  const data = document.createElement("p");
-  frm.appendChild(data);
+  const time = document.createElement("p");
+  frm.appendChild(time);
   const text_d = document.createTextNode("gg/mm/aaaa");
-  data.appendChild(text_d);
+  time.appendChild(text_d);
 
   const corpo = document.getElementById("corpo");
   corpo.appendChild(frm);
 }
-
-function TenNews() {
-  for (let i = 0; i < 10; i++) {
-    NewsFrame("frame", "div_a");
-  }
-}
-TenNews();
+//function TenNews() {
+//for (let i = 0; i < 10; i++) {
+//  NewsFrame("frame", "div_a", "data");
+//}
+//}
+//TenNews();
 
 let button = document.getElementById("btn");
 
-button.addEventListener("click", TenNews);
+//button.addEventListener("click", TenNews);
+
+//perchè adesso funziona ma tutti i text node degli h3 sono undefinede ince di prendere la stringa da data.title?
