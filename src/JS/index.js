@@ -1,3 +1,5 @@
+import "../css/style.css";
+
 let main = document.querySelector("main");
 main.setAttribute("id", "corpo");
 
@@ -39,8 +41,12 @@ function NewsFrame(classe, div_a, data) {
 }
 let counter = 0;
 
-TenMore();
-//ricorda di togliere i 2 console.log
+//!!!!!!!!!
+
+//!!!!!! RICORDATIIIIII di togliere i 2 console.log e il file di backup.TXT
+
+//!!!!!!!!!
+
 function TenMore() {
   fetch("https://hacker-news.firebaseio.com/v0/newstories.json")
     .then((response) => response.json())
@@ -67,5 +73,11 @@ function TenMore() {
     });
 }
 
+TenMore();
+
 const button = document.getElementById("btn");
 button.addEventListener("click", TenMore);
+
+/*
+RIPRENDI DAL VIDEO (10) WEBPACK ITALIANO e cotrolla menglo percorso cartella img o come funzionano le img con webpack
+*/
