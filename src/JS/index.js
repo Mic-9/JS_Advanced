@@ -43,7 +43,7 @@ let counter = 0;
 
 //!!!!!!!!!
 
-//!!!!!! RICORDATIIIIII di togliere i 2 console.log e il file di backup.TXT
+//!!!!!! RICORDATIIIIII di togliere i 2 console.log
 
 //!!!!!!!!!
 
@@ -79,5 +79,5 @@ const button = document.getElementById("btn");
 button.addEventListener("click", TenMore);
 
 /*
-RIPRENDI DAL VIDEO (10) WEBPACK ITALIANO e cotrolla menglo percorso cartella img o come funzionano le img con webpack
+RIPRENDI DAL VIDEO (10) WEBPACK ITALIANO e controlla come importare immagini in js (appendChild)
 */

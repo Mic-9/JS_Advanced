@@ -27,18 +27,18 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|webp|svg|ico)$/i,
+        use: ["file-loader"],
         type: "asset/resource",
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Applicazione",
       template: "./src/index.html",
+      filename: "index.html",
     }),
   ],
   devServer: {
-    port: 5000,
     open: true,
     static: path.resolve(__dirname, "dist"),
   },
