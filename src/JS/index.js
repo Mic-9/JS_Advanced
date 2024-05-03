@@ -73,11 +73,10 @@ function TenMore() {
     });
 }
 
-TenMore();
-
 const button = document.getElementById("btn");
 button.addEventListener("click", TenMore);
 
+TenMore();
 /*
 RIPRENDI DAL VIDEO (10) WEBPACK ITALIANO e controlla come importare immagini in js (appendChild)
 */
