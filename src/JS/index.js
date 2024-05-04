@@ -1,7 +1,17 @@
 import "../css/style.css";
+import linkedin from "../img/linkedin-icon.svg";
+import github from "../img/logo-github.svg";
 
 let main = document.querySelector("main");
 main.setAttribute("id", "corpo");
+
+const linkIcon = document.createElement("img");
+linkIcon.src = linkedin;
+document.getElementById("link").appendChild(linkIcon);
+
+const gitLogo = document.createElement("img");
+gitLogo.src = github;
+document.getElementById("git").appendChild(gitLogo);
 
 function NewsFrame(classe, div_a, data) {
   const frm = document.createElement("div");
@@ -78,5 +88,5 @@ button.addEventListener("click", TenMore);
 
 TenMore();
 /*
-RIPRENDI DAL VIDEO (10) WEBPACK ITALIANO e controlla come importare immagini in js (appendChild)
+RIPRENDI DAL VIDEO (12) WEBPACK raggruppa img in una cartella dentro dist
 */

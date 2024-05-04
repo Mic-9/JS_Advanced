@@ -27,7 +27,12 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|webp|svg|ico)$/i,
-        type: "asset/resource",
+        use: {
+          loader: "img-optimize-loader",
+          options: {
+            compress: { mode: "low" },
+          },
+        },
       },
     ],
   },
