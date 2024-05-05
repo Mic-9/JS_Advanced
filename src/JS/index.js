@@ -5,6 +5,8 @@ import github from "../img/logo-github.svg";
 let main = document.querySelector("main");
 main.setAttribute("id", "corpo");
 
+//immagini footer
+
 const linkIcon = document.createElement("img");
 linkIcon.src = linkedin;
 document.getElementById("link").appendChild(linkIcon);
@@ -12,6 +14,8 @@ document.getElementById("link").appendChild(linkIcon);
 const gitLogo = document.createElement("img");
 gitLogo.src = github;
 document.getElementById("git").appendChild(gitLogo);
+
+//frame news generico
 
 function NewsFrame(classe, div_a, data) {
   const frm = document.createElement("div");
@@ -49,21 +53,16 @@ function NewsFrame(classe, div_a, data) {
   const corpo = document.getElementById("corpo");
   corpo.appendChild(frm);
 }
+
+//fetch
+
 let counter = 0;
-
-//!!!!!!!!!
-
-//!!!!!! RICORDATIIIIII di togliere i 2 console.log
-
-//!!!!!!!!!
 
 function TenMore() {
   fetch("https://hacker-news.firebaseio.com/v0/newstories.json")
     .then((response) => response.json())
     .then((tenId) => {
-      console.log(tenId);
       const Ten = tenId.slice(counter, counter + 10);
-      console.log(Ten);
       Ten.forEach((tenId) => {
         const singleUrl = `https://hacker-news.firebaseio.com/v0/item/${tenId}.json`;
         fetch(singleUrl)
@@ -71,7 +70,6 @@ function TenMore() {
           .then((data) => {
             NewsFrame("classe", "div_a", data);
           })
-
           .catch((e) => {
             console.error("Errore singolo id:", e);
           });
@@ -83,10 +81,9 @@ function TenMore() {
     });
 }
 
+//Load more button
+
 const button = document.getElementById("btn");
 button.addEventListener("click", TenMore);
 
 TenMore();
-/*
-RIPRENDI DAL VIDEO (12) WEBPACK raggruppa img in una cartella dentro dist
-*/
