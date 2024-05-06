@@ -6,14 +6,13 @@ This application allows you to know the last tech news, thanks to [Hacker News](
 
 I chose this design because it's user friendly, with a simple grid of news that shows the title, the date an a link to the original news.
 
-![](img/og-img.png)
+![](src/img/og-img.png)
 
 ## Built With
 
 - [JavaScript]()
 - [HTML]()
 - [CSS]()
-- [Axios]()
 - [Webpack]()
 
 ## Author
