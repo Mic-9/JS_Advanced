@@ -87,5 +87,3 @@ const button = document.getElementById("btn");
 button.addEventListener("click", TenMore);
 
 TenMore();
-
-//controlla perchè non ti ignora la cartella dist (copilot)
