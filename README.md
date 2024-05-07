@@ -4,7 +4,7 @@ This application allows you to know the last tech news, thanks to [Hacker News](
 
 ## Minimal Design
 
-I chose this design because it's user friendly, with a simple grid of news that shows the title, the date an a link to the original news.
+I chose this design because it's user friendly, with a simple grid of 10 news that shows the title, the date an a link to the original news. The "Load more" button will allow to load an additional 10 news items with each click
 
 ![](src/img/og-img.png)
 
