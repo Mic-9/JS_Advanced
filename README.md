@@ -1,6 +1,6 @@
 # Hacker News
 
-This application allows you to know the last tech news, thanks to [Hacker News](https://github.com/HackerNews/API) service [Try it here!](//link al sito)
+This application allows you to know the last tech news, thanks to [Hacker News](https://github.com/HackerNews/API) service [Try it here!](https://hackernews-mic-9-js-advanced.netlify.app/)
 
 ## Minimal Design
 
